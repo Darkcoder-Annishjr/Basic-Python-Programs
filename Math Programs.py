@@ -70,4 +70,14 @@ r = int(input(''))
 vol = (4/3)*pi*r*r*r
 print(str(vol))
 """
+PENTAGONAL NUMBERS
+"""
+n = int(input())
+# Generate the first n pentagonal numbers
+for i in range(1, n):
+    # Calculate the i-th pentagonal number using the formula Pn=n(3n−1)/2
+    Pn = int( (i * (3 * i - 1)) / 2)
+    # Print the i-th pentagonal number
+    print(Pn)
+"""
 END
