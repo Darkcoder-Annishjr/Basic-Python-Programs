@@ -103,4 +103,26 @@ def is_pangram():
     else:
         return "not a pangram"
 """
+COMPARISON BTW TWO NUMBERS (Using Ternary Opertor)
+"""
+num1 = int(input("Enter number num1: "))
+num2 = int(input("Enter number num2: "))
+
+'num1 is greater than num2' if num1 > num2 else 'num1 is not greater than num2'
+'num1 is smaller than num2' if num1 < num2 else 'num1 is not smaller than num2'
+'num1 is equal to num2' if num1 == num2 else 'num1 is not equal to num2'
+"""
+COMPARISON BTW THREE NUMBERS (Using Ternary Operator)
+"""
+num1 = int(input("Enter number num1: "))
+num2 = int(input("Enter number num2: "))
+num3 = int(input("Enter number num3: "))
+
+'num1 is greater than num2 and num3' if num3 < num1 > num2 else 'num1 is not greater than num2 snd num3'
+'num2 is greater than num1 and num3' if num1 < num2 > num3 else 'num2 is not greater than num1 and num3'
+'num3 is greater than num1 and num2' if num1 < num3 > num2 else 'num3 is not greater than num1 and num2'
+"""
+
+
+
 
