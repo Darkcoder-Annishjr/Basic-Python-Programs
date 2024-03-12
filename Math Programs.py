@@ -80,4 +80,43 @@ for i in range(1, n):
     # Print the i-th pentagonal number
     print(Pn)
 """
+SMALLEST NUMBER
+"""
+def smallest_multiple(n):
+    primes = []
+    for i in range(2, n+1):
+        is_prime = True
+        for j in range(2, int(i**0.5)+1):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(i)
+    result = 1
+    for prime in primes:
+        power = 1
+        while prime**power <= n:
+            power += 1
+        result *= prime**(power-1)
+    return result
+
+n = int(input())
+print(smallest_multiple(n))
+"""
+PRINTING EVEN AND ODD SEPARATELY
+"""
+n = int(input())
+even = []
+odd = []
+for i in range(n):
+    num = int(input())
+    if num % 2 == 0:
+        even.append(num)
+    else:
+        odd.append(num)
+print(*even, end=' ')
+print()
+print(*odd, end=' ')
+print()
+"""
 END
