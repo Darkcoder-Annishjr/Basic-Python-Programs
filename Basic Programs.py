@@ -57,3 +57,50 @@ names.sort()
 for name in names:
     print(name)
 """
+SWAPCASES
+"""
+def swap_case(s):
+    """
+    This function takes a string as input and swaps the case of all characters in the string.
+    """
+    swapped_str = ""
+    for char in s:
+        if char.isupper():
+            swapped_str += char.lower()
+        elif char.islower():
+            swapped_str += char.upper()
+        else:
+            swapped_str += char
+    return swapped_str
+
+# Taking user input
+s = input()
+
+# Calling the swap_case function with user input
+print(swap_case(s))
+"""
+PANAGRAM
+"""
+def is_pangram():
+    # Read input sentence
+    sentence = input("Enter a sentence: ").lower()
+
+    # Initialize a list to keep track of used alphabets
+    used = [False] * 26
+
+    # Loop through each character in the sentence
+    for char in sentence:
+        # Check if character is an alphabet
+        if char.isalpha():
+            # Get the index of the alphabet (a=0, b=1, ...)
+            index = ord(char) - ord('a')
+            # Mark the alphabet as used
+            used[index] = True
+
+    # Check if all alphabets are used
+    if all(used):
+        return "pangram"
+    else:
+        return "not a pangram"
+"""
+
