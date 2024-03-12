@@ -218,5 +218,120 @@ data = sorted(data, key=lambda x: x[k])
 for row in data:
     print(" ".join(map(str, row)))
 """
+<---------- Programs using class and objects ---------->
+LCM
+"""
+class lcm:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def find_lcm(self):
+        i = 1
+        while(1):
+            if(i % self.a == 0 and i % self.b == 0):
+                lcm = i
+                break
+            i += 1
+        print("LCM is:", lcm)
+
+obj = lcm(int(input()), int(input()))
+obj.find_lcm()
+"""
+ADDITION AND SUBTRACTION
+"""
+class Operation:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+        
+    def addition(self):
+        return self.a + self.b
+    
+    def subtraction(self):
+        return self.a - self.b
+
+a = int(input())
+b = int(input())
+
+op = Operation(a, b)
+sum = op.addition()
+diff = op.subtraction()
+
+print(sum)
+print(diff)
+"""
+GCD
+"""
+import fractions
+class gcd:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+        
+    def g(self):
+        return fractions.gcd(self.num1, self.num2)
+    
+num1 = int(input())
+num2 = int(input())
+obj = gcd(num1, num2)
+print("The GCD is", obj.g())
+"""
+KM TO MILES
+"""
+def convert(self):
+
+KEYWORD
+m.convert()"""
+class miles:
+    def __init__(self, k):
+        self.k = k
+        
+    def convert(self):
+        miles = self.k * 0.621371
+        print("{0} kilometers is equal to {1} miles".format(self.k, miles))
+k = float(input())
+m = miles(k)
+m.convert()
+"""
+RECTANGLE
+"""
+class rectangle:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    
+    def area(self):
+        return self.length * self.breadth
+    
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
+# User Input
+length = float(input())
+breadth = float(input())
+# Output
+r = rectangle(length, breadth)
+print("The area is:", r.area())
+print("The perimeter is:", r.perimeter())
+"""
+TYPE OF THE NUMBER
+"""
+class check:
+    def check(self):
+        # take input from user
+        n = int(input())
+        if n > 0:
+            print("+ve")
+        elif n < 0:
+            print("-ve")
+        else:
+            print("0")
+# create an object of the class and call the check method
+c = check()
+c.check()
+"""
+END
+
+
 
 END
