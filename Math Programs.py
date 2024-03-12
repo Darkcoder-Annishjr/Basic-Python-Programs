@@ -119,4 +119,104 @@ print()
 print(*odd, end=' ')
 print()
 """
+FACTORIAL
+"""
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+n = int(input())
+print(factorial(n))
+"""
+ASCENDING ORDER
+"""
+arr = list(map(int, input().split()))
+
+# Sort the array in ascending order using a for loop
+for i in range(len(arr)):
+    for j in range(i+1, len(arr)):
+        if arr[i] > arr[j]:
+            arr[i], arr[j] = arr[j], arr[i]
+
+# Print the sorted array
+print(*arr)
+"""
+ISBN 
+"""
+def validate_isbn(isbn):
+    if len(isbn) != 10: # ISBN should be a 10 digit number
+        return "Invalid"
+    else:
+        total = 0
+        for j in range(10):
+            if isbn[j] == 'X': # handle the case where last digit is 'X'
+                total += 10 * (10-j)
+            else:
+                total += int(isbn[j]) * (10-j)
+        if total % 11 == 0:
+            return "Valid"
+        else:
+            return "Invalid"
+
+t = int(input()) # number of books
+for i in range(t):
+    isbn = input()
+    print(validate_isbn(isbn))
+"""
+ODD OR EVEN
+"""
+def check_even(n):
+    if n %2 == 0:
+        return "Even"
+    else:
+        return "ODD"
+n = int(input())
+print(check_even(n))
+"""
+PERFECT NUMBER OR NOT
+"""
+def is_perfect(num):
+    sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            sum += i
+    if sum == num:
+        return True
+    else:
+        return False
+num = int(input())
+if is_perfect(num):
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+"""
+REPLACE NUMBER
+"""
+def replace_digits(num_str):
+    return num_str.replace('0', 'x').replace('7', '0').replace('x', '7')
+
+input_str = str(input().strip())
+print(replace_digits(input_str))
+"""
+SORTED TABLE
+"""
+n, m = map(int, input().strip().split(' '))
+
+# read the data into a list of tuples
+data = []
+for i in range(n):
+    row = tuple(map(int, input().strip().split(' ')))
+    data.append(row)
+
+# sort the data based on the k-th attribute
+k = int(input().strip())
+data = sorted(data, key=lambda x: x[k])
+
+# print the sorted data
+for row in data:
+    print(" ".join(map(str, row)))
+"""
+
 END
