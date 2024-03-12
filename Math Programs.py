@@ -332,6 +332,3 @@ c.check()
 """
 END
 
-
-
-END
